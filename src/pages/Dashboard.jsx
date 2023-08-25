@@ -1,11 +1,191 @@
-import React from "react";
+import React, { useState } from "react";
 import Navbar from "../components/dashboard/Navbar";
 import BgHome from "../assets/images/bg_home.jpg";
 import KabupatenLogo from "../assets/images/kabupaten-logo.png";
 import Carousel from "../components/dashboard/Carousel";
 import Footer from "../components/dashboard/Footer";
 import Scrollbar from "../components/dashboard/Scrollbar";
+
+const information = [
+  {
+    name: "Layanan Kependudukan",
+    contents: [
+      {
+        layanan: "Kartu Tanda Penduduk",
+        url: "",
+      },
+      {
+        layanan: "Kartu Identitas Anak",
+        url: "",
+      },
+      {
+        layanan: "Kartu Keluarga",
+        url: "",
+      },
+      {
+        layanan: "Akta Kelahiran",
+        url: "",
+      },
+      {
+        layanan: "Akta Kematian",
+        url: "",
+      },
+      {
+        layanan: "Akta Perceraian",
+        url: "",
+      },
+    ],
+  },
+  {
+    name: "Pendidikan",
+    contents: [
+      {
+        layanan: "KTM",
+        url: "",
+      },
+      {
+        layanan: "Kartu Identitas Anak",
+        url: "",
+      },
+      {
+        layanan: "Kartu Keluarga",
+        url: "",
+      },
+      {
+        layanan: "Akta Kelahiran",
+        url: "",
+      },
+      {
+        layanan: "Akta Kematian",
+        url: "",
+      },
+      {
+        layanan: "Akta Perceraian",
+        url: "",
+      },
+    ],
+  },
+  {
+    name: "Pengaduan Warga",
+    contents: [
+      {
+        layanan: "Kartu Tanda Penduduk",
+        url: "",
+      },
+      {
+        layanan: "Kartu Identitas Anak",
+        url: "",
+      },
+      {
+        layanan: "Kartu Keluarga",
+        url: "",
+      },
+      {
+        layanan: "Akta Kelahiran",
+        url: "",
+      },
+      {
+        layanan: "Akta Kematian",
+        url: "",
+      },
+      {
+        layanan: "Akta Perceraian",
+        url: "",
+      },
+    ],
+  },
+  {
+    name: "Ikeeehhh",
+    contents: [
+      {
+        layanan: "Kartu Tanda Penduduk",
+        url: "",
+      },
+      {
+        layanan: "Kartu Identitas Anak",
+        url: "",
+      },
+      {
+        layanan: "Kartu Keluarga",
+        url: "",
+      },
+      {
+        layanan: "Akta Kelahiran",
+        url: "",
+      },
+      {
+        layanan: "Akta Kematian",
+        url: "",
+      },
+      {
+        layanan: "Akta Perceraian",
+        url: "",
+      },
+    ],
+  },
+  {
+    name: "Dummy woi",
+    contents: [
+      {
+        layanan: "Kartu Tanda Penduduk",
+        url: "",
+      },
+      {
+        layanan: "Kartu Identitas Anak",
+        url: "",
+      },
+      {
+        layanan: "Kartu Keluarga",
+        url: "",
+      },
+      {
+        layanan: "Akta Kelahiran",
+        url: "",
+      },
+      {
+        layanan: "Akta Kematian",
+        url: "",
+      },
+      {
+        layanan: "Akta Perceraian",
+        url: "",
+      },
+    ],
+  },
+  {
+    name: "Dummy",
+    image: BgHome,
+    contents: [
+      {
+        layanan: "Kartu Tanda Penduduk",
+        url: "",
+      },
+      {
+        layanan: "Kartu Identitas Anak",
+        url: "",
+      },
+      {
+        layanan: "Kartu Keluarga",
+        url: "",
+      },
+      {
+        layanan: "Akta Kelahiran",
+        url: "",
+      },
+      {
+        layanan: "Akta Kematian",
+        url: "",
+      },
+      {
+        layanan: "Akta Perceraian",
+        url: "",
+      },
+    ],
+  },
+];
+
 export default function Dashboard() {
+  const [name, setName] = useState("Pendidikan");
   return (
     <>
       <Navbar />
@@ -26,7 +206,7 @@ export default function Dashboard() {
         </div>
       </div>
       <div className="my-24 mx-[200px]">
-        <Scrollbar/>
+        <Scrollbar />
       </div>
       <div className="py-20 bg-[#101820] rounded-t-[100px]">
         <h1 className=" mx-[100px] text-[40px] text-white mb-[45px]">
@@ -34,64 +214,53 @@ export default function Dashboard() {
         </h1>
 
         <div className="mx-[100px] flex">
-          <div className="flex">
-            <ul className="text-[13px] mr-16">
-              <li className="mb-5">
-                <button className="bg-white w-[222px] h-[50px]  items rounded-md text-black hover:font-bold duration-100 ">
-                  Layanan Kependudukan
-                </button>
-              </li>
-              <li className="mb-5">
-                <button className="bg-white w-[222px] h-[50px] items-center rounded-md text-black hover:font-bold duration-300">
-                  Pendidikan
-                </button>
-              </li>
-              <li className="mb-5">
-                <button className="bg-white w-[222px] h-[50px] items-center rounded-md text-black hover:font-bold duration-300">
-                  Pengaduan Warga
-                </button>
-              </li>
-            </ul>
-            <ul className="text-[13px]">
-              <li className="mb-5">
-                <button className="bg-white w-[222px] h-[50px]  items-center rounded-md text-black hover:font-bold duration-100 ">
-                  Layanan Kependudukan
-                </button>
-              </li>
-              <li className="mb-5">
-                <button className="bg-white w-[222px] h-[50px] items-center rounded-md text-black hover:font-bold duration-300">
-                  Pendidikan
-                </button>
-              </li>
-              <li className="mb-5">
-                <button className="bg-white w-[222px] h-[50px] items-center rounded-md text-black hover:font-bold duration-300">
-                  Pengaduan Warga
-                </button>
-              </li>
+          <div>
+            <ul className="text-[13px] mr-16 flex flex-wrap min-w-[300px]">
+              {information.map((items, index) => {
+                return (
+                  <li className="m-3" key={index}>
+                    <button onClick={()=>{
+                      setName(items.name)
+                    }} className="bg-white w-[222px] h-[50px] rounded-md text-black hover:font-bold duration-100 ">
+                      {items.name}
+                    </button>
+                  </li>
+                );
+              })}
             </ul>
           </div>
           <div className="flex text-white mx-20">
-            <div className="w-[300px] h-[473px] bg-white mr-10 bg-cover bg-center" style={{backgroundImage: `url('${BgHome}')`}}>
-
-            {/* <img src={BgHome} alt="" className="max-w-full "/> */}
+            <div
+              className="w-[300px] h-[473px] bg-white mr-10 bg-cover bg-center"
+              style={{ backgroundImage: `url('${BgHome}')` }}
+            >
+              {/* <img src={BgHome} alt="" className="max-w-full "/> */}
             </div>
             <section>
-              <h1 className="font-medium text-xl mb-2">Layanan Kependudukan</h1>
-              <hr />
-              <ul className="mt-4">
-                <li className="hover:underline duration-200"><a href="/">Kartu Tanda Penduduk</a></li>
-                <li>Kartu Identitas Anak</li>
-                <li>Kartu Keluarga</li>
-                <li>Akta Kelahiran</li>
-                <li>Akta Kematian</li>
-                <li>Akta Perceraian</li>
+                    <h1 className="font-medium text-xl mb-2">
+                      {name}
+                    </h1>
+                    <hr />
+                    <ul className="mt-4">
+            {information
+              .find((item) => {
+                return item.name === name;
+              })
+              .contents.map((child, index) => {
+                return (
+                      <li className="hover:underline duration-200">
+                        <a href={child.url}>{child.layanan}</a>
+                      </li>
+
+                );
+              })}
               </ul>
-            </section>
+                  </section>
           </div>
         </div>
       </div>
 
-      <Footer/>
+      <Footer />
     </>
   );
 }
