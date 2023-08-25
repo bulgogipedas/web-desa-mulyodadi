@@ -1,7 +1,7 @@
 import React from "react";
 import Navbar from "../components/dashboard/Navbar";
 import BgHome from "../assets/images/bg_home.jpg";
-// import KabupatenLogo from "../assets/images/kabupaten_logo.png";
+import KabupatenLogo from "../assets/images/kabupaten_logo.png";
 import Carousel from "../components/dashboard/Carousel";
 import Footer from "../components/dashboard/Footer";
 import Scrollbar from "../components/dashboard/Scrollbar";
@@ -16,7 +16,7 @@ export default function Dashboard() {
       >
         <div className=" bg-black/30 backdrop-brightness-75 absolute left-0 right-0 top-0 bottom-0"></div>
         <div className="mx-[200px] items-center text-white z-10 font-sans ">
-          {/* <img src={KabupatenLogo} alt="" className="w-[100px]" /> */}
+          <img src={KabupatenLogo} alt="" className="w-[100px]" />
           <h1 className="text-4xl font-medium my-5">Desa Mulyodadi</h1>
           <p className="w-[50%] text-justify text-[20px]">
             Kehidupan perdesaan yang semarak dengan berbagai keragaman, dari
