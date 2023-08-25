@@ -7,7 +7,7 @@ import 'swiper/css';
 import 'swiper/css/scrollbar';
 import '../../scrollbar.css';
 import 'swiper/css/navigation';
-import PanenTerbaik from '../../assets/images/Panen Terbaik.png';
+import PanenTerbaik from '../../assets/images/panenterbaik.png';
 
 
 // import required modules
